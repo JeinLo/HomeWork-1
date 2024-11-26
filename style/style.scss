@@ -17,6 +17,9 @@ body{
     padding-left: calc(50% - 600px);
     padding-right: calc(50% - 600px);
 }
+.box{
+    overflow: hidden;
+}
 .header{
     max-height: 800px;
     background: rgb(225, 255, 143);
@@ -121,10 +124,10 @@ body{
         align-items: start;
         &__card{
             display: flex;
-                flex-direction: column;
-                grid-column: span 4;
-                background-color: #FFFFFF ;
-                border-radius: 30px;
+            flex-direction: column;
+            grid-column: span 4;
+            background-color: #FFFFFF ;
+            border-radius: 30px;
                 &_top{
                     margin-top: -40px;
                 }
@@ -269,7 +272,7 @@ body{
         padding-top: 61px;
     }
 
-@import 'hover'
-
+@import 'hover';
+@import 'mobile';
 
     

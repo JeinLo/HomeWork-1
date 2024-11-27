@@ -32,10 +32,19 @@
 }
 
 .banner{
-    display: none;
     width: 1717px;
     height: 51px;
+    width: 1717px;
+    height: 51px;
+    padding: 16px 24px 16px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 
+    &__star::after{
+        content: url('/img/Star_blackmini.svg'); 
+    }
     &__text{
         font-size: 16px;
     }
@@ -48,21 +57,50 @@
 }
 .title{
     font-size: 40px;
+    padding-bottom: 39px;
+}
+.galery__conteiner{
+    background-image: none;
 }
 .galery{
-
+    margin-bottom: -54px;
+    
     &__item{
-    height: 284px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
+        background-repeat: no-repeat;
+        background-size: 382px;
+        background-position: revert-layer;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: baseline;
+        width: 383px;
+        margin: auto;
+        margin-bottom: 30px;
+        padding-left: 30px;
+        height: 664px;
+    }
+    &__title{
+        font-size: 32px;
+        line-height: 39px;
+        width: 285px;
+    }
+    &__text{
+        font-size: 16px;
+        line-height: 20px;
+        width: 285px;
+    }
+    &__button{
+        width: 285px;
+        height: 55px;
+        /* margin: 10px 0px; */
+        font-size: 16px;
+        margin-bottom: -22px;
     }
 }
 
-
 .footer{
     font-size: 16px;
-}
+    height: 100px;
+    padding-top: 35px;
 
+}
 }

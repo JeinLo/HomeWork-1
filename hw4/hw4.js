@@ -29,34 +29,34 @@ for (const item in obj) {
 
 //Задание 5
 
-let n = 1000;
-let num = 0;
-while (n >= 50){
-    n /= 2;
-    console.log(n);
-    num++;
-}
-console.log(`Количество циклов: ${num}`);
+// let n = 1000;
+// let num = 0;
+// while (n >= 50){
+//     n /= 2;
+//     console.log(n);
+//     num++;
+// }
+// console.log(`Количество циклов: ${num}`);
 
 //Задание 6
 
-let day = 1;
-let allDay = 31;
-for (let i = day; i <= allDay; i++) {
+const firstFriday = 3;
+const daysInMont = 31;
+for (let i = firstFriday; i <= daysInMont; i += 7) {
     console.log(`Сегодня пятница, ${i}-е число. Необходимо подготовить отчет`);  
 }
 
 // Дополнительные задания
 // Задание 1
 
-let k = 100;
-let iterations = 0;
-while (n >= 0) {
-    k -= 7;
-    iterations++;
-}
-console.log(`Результат ${k}`);
-console.log(`Количество циклов: ${iterations}`);
+// let k = 100;
+// let iterations = 0;
+// while (n >= 0) {
+//     k -= 7;
+//     iterations++;
+// }
+// console.log(`Результат ${k}`);
+// console.log(`Количество циклов: ${iterations}`);
 
 //Задание 2
 
@@ -85,11 +85,11 @@ const book = {
     author: 'Лев Толстой',
     year: 1869,
     genre: 'Роман'
+};
+
+for (const key in book) {
+    console.log(`${key}: ${book[key]}`);
 }
-console.log(`Название: ${title}`);
-console.log(`Автор: ${author}`);
-console.log(`Год издания: ${year}`);
-console.log(`Жанр: ${genre}`);
 
 //Задание 4
 

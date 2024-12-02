@@ -1,1 +1,382 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*html {
+    scroll-behavior: smooth;
+  }*/
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.box {
+  overflow: hidden;
+}
+
+.header {
+  max-height: 800px;
+  background: rgb(225, 255, 143);
+  background-repeat: no-repeat;
+  background-position: calc(100% + 480px) -400px, calc(100% - 1312px) 88px, calc(100% - 1258px) 50px, calc(100% - 346px) 540px, calc(100% - 436px) 495px;
+  overflow: hidden;
+  background-image: url("/img/Star-top.svg"), url("/img/Star 2.svg"), url("/img/Star 3.svg"), url("/img/Star 4.svg"), url("/img/Star 5.svg");
+}
+.header__title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  width: 768px;
+  padding-top: 196px;
+  padding-bottom: 24px;
+}
+.header__text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  width: 720px;
+  padding-bottom: 48px;
+}
+.header__text-bold {
+  font-weight: 600;
+}
+.header__button {
+  width: 247px;
+  height: 66px;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 156px;
+  font-family: "Montserrat";
+}
+
+.banner {
+  position: relative;
+  width: 3220px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 27px 49px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background: rgb(188, 236, 48);
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.banner__text {
+  color: rgb(32, 32, 39);
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-right: 51px;
+  padding-left: 51px;
+}
+.banner__star::after {
+  content: url("/img/Star_black.svg");
+  position: absolute;
+  margin-left: 28px;
+}
+
+.title {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  text-align: left;
+  padding-top: 77px;
+  padding-bottom: 24px;
+}
+.title-mini {
+  padding-top: 46px;
+  padding-bottom: 72px;
+}
+.title__text {
+  margin: 0;
+  width: 700px;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  padding-bottom: 72px;
+}
+
+.img__conteiner {
+  background: rgb(32, 32, 39);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: calc(100% + 91px) 94px, calc(100% - 1355px) 730px, calc(100% - 1322px) 794px;
+  background-image: url("/img/Star 1.svg"), url("/img/Star 11.svg"), url("/img/Star 12.svg");
+  overflow: hidden;
+}
+
+.img {
+  max-height: 1060px;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+.img__card {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 4;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  margin-bottom: 16px;
+}
+.img__card_top {
+  margin-top: -40px;
+}
+.img__number {
+  width: 111px;
+  height: 36px;
+  color: rgb(32, 32, 39);
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 52.58px;
+  background: rgb(247, 247, 247);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13px;
+  margin-left: 32px;
+  margin-bottom: 10px;
+}
+.img__text {
+  color: rgb(32, 32, 39);
+  font-size: 32px;
+  font-weight: 700;
+  text-align: left;
+  padding: 0 36px 32px;
+  max-width: 372px;
+}
+
+.galery__conteiner {
+  background: rgb(32, 32, 39);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 49px) 111px, calc(100% - 125px) 85px, calc(100% - 47px) 3372px, calc(100% - 139px) 3426px;
+  background-image: url("/img/Star 6.svg"), url("/img/Star 7.svg"), url("/img/Star 8.svg"), url("/img/Star 10.svg");
+  overflow: hidden;
+  padding-bottom: 144px;
+}
+
+.galery {
+  border-radius: 30px;
+}
+.galery__item {
+  max-width: 1200px;
+  height: 500px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.galery__item_left {
+  flex-direction: row-reverse;
+}
+.galery__card {
+  padding: 48px;
+  width: 100%;
+}
+.galery__title {
+  color: rgb(32, 32, 39);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+  padding-bottom: 24px;
+  width: 504px;
+}
+.galery__text {
+  color: rgb(32, 32, 39);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  padding-bottom: 36px;
+  width: 500px;
+}
+.galery__button {
+  width: 247px;
+  height: 66px;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-right: 260px;
+  font-family: "Montserrat";
+}
+
+.footer {
+  height: 150px;
+  background: rgb(189, 237, 53);
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: center;
+  padding-top: 61px;
+}
+
+.header__button:hover {
+  background: rgb(255, 255, 255);
+  color: black;
+}
+
+.header__button {
+  transition: all 0.5s;
+}
+
+.galery__button:hover {
+  background: rgb(255, 255, 255);
+  color: black;
+}
+
+.galery__button {
+  transition: all 0.5s;
+}
+
+.img__card {
+  transition: all 1s;
+}
+
+.img__card:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header {
+    background-image: none;
+    background-position: calc(100% + 86px) -80px, calc(100% - 343px) 125px, calc(100% - 295px) 77px, calc(100% - 47px) 688px, calc(100% - 118px) 670px;
+    background-image: url("/img/miniStar1.svg"), url("/img/miniStar2.svg"), url("/img/miniStar3.svg"), url("/img/miniStar4.svg"), url("/img/miniStar5.svg");
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+  .header__title {
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+    display: flex;
+    width: 262px;
+  }
+  .header__text {
+    font-size: 16px;
+    width: 340px;
+    text-align: center;
+  }
+  .header__button {
+    width: 285px;
+    height: 55px;
+    font-size: 16px;
+  }
+  .banner {
+    width: 1717px;
+    height: 51px;
+    width: 1717px;
+    height: 51px;
+    padding: 16px 24px 16px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .banner__star::after {
+    content: url(/img/Star_blackmini.svg);
+  }
+  .banner__text {
+    font-size: 16px;
+  }
+  .img__conteiner {
+    display: none;
+  }
+  .img {
+    display: none;
+  }
+  .title {
+    font-size: 40px;
+    padding-bottom: 39px;
+  }
+  .galery__conteiner {
+    background-image: none;
+  }
+  .galery__item {
+    display: none;
+  }
+  .galery__item {
+    display: flex;
+    margin-bottom: 30px;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+  .galery__card {
+    width: 100%;
+    padding: 16px 58px 20px;
+  }
+  .galery__title {
+    font-size: 32px;
+    line-height: 39px;
+    width: 285px;
+  }
+  .galery__text {
+    font-size: 16px;
+    line-height: 20px;
+    width: 285px;
+  }
+  .galery__button {
+    width: 285px;
+    height: 55px;
+    font-size: 16px;
+  }
+  .footer {
+    font-size: 16px;
+    height: 100px;
+    padding-top: 35px;
+  }
+}
+@media (max-width: 375px) {
+  .galery__card {
+    padding: 16px 30px 24px;
+  }
+  .galery__button {
+    width: 265px;
+  }
+}
+@media (max-width: 320px) {
+  .galery__card {
+    padding: 16px 15px 24px;
+  }
+  .galery__button {
+    width: 260px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -8,6 +8,10 @@
    background-image: none;
    background-position: calc(100% + 86px) -80px, calc(100% - 343px) 125px, calc(100% - 295px) 77px, calc(100% - 47px) 688px, calc(100% - 118px) 670px;
    background-image: url('/img/miniStar1.svg'), url('/img/miniStar2.svg'), url('/img/miniStar3.svg'), url('/img/miniStar4.svg'), url('/img/miniStar5.svg');
+   display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 
    &__title{
     font-size: 40px;
@@ -15,19 +19,16 @@
     text-align: center;
     display: flex;
     width: 262px;
-    padding-left: 57px;
    }
    &__text{
     font-size: 16px;
     width: 340px;
-    padding-left: 40px;
     text-align: center;
    }
    &__button{
     width: 285px;
     height: 55px;
     font-size: 16px;
-    margin-left: 46px;
    }
 }
 
@@ -43,7 +44,7 @@
     align-items: flex-start;
 
     &__star::after{
-        content: url('/img/Star_blackmini.svg'); 
+        content: url(/img/Star_blackmini.svg); 
     }
     &__text{
         font-size: 16px;
@@ -62,21 +63,23 @@
 .galery__conteiner{
     background-image: none;
 }
+.galery__item{
+    display: none;
+}
 .galery{
-    margin-bottom: -54px;
-    
+
     &__item{
-        background-repeat: no-repeat;
-        background-size: 382px;
-        background-position: revert-layer;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        align-items: baseline;
-        width: 383px;
-        margin: auto;
+        display: flex;
         margin-bottom: 30px;
-        padding-left: 30px;
-        height: 664px;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        flex-direction: column-reverse;
+        height: 100%;
+      
+    }
+    &__card{
+        width: 100%;
+        padding: 16px 58px 20px;
     }
     &__title{
         font-size: 32px;
@@ -91,9 +94,7 @@
     &__button{
         width: 285px;
         height: 55px;
-        /* margin: 10px 0px; */
         font-size: 16px;
-        margin-bottom: -22px;
     }
 }
 
@@ -101,6 +102,27 @@
     font-size: 16px;
     height: 100px;
     padding-top: 35px;
+    }
+}
 
-}
-}
+@media (max-width: 375px){
+    .galery{
+        &__card{
+            padding: 16px 30px 24px;
+            }
+            &__button{
+                width: 265px;
+                }
+            }
+    }
+
+@media (max-width: 320px){
+    .galery{
+        &__card{
+            padding: 16px 15px 24px;
+            }
+        &__button{
+            width: 260px;
+            }
+        }
+    }

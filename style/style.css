@@ -368,9 +368,6 @@ body {
   .galery__card {
     padding: 16px 30px 24px;
   }
-  .galery__button {
-    width: 265px;
-  }
 }
 @media (max-width: 320px) {
   .galery__card {

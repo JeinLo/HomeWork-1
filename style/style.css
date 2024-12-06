@@ -66,6 +66,7 @@ body {
 }
 
 .banner {
+  position: relative;
   width: 3220px;
   height: 90px;
   display: flex;
@@ -85,6 +86,11 @@ body {
   text-transform: uppercase;
   padding-right: 51px;
   padding-left: 51px;
+}
+.banner__star::after {
+  content: url("/img/Star_black.svg");
+  position: absolute;
+  margin-left: 28px;
 }
 
 .title {
@@ -135,34 +141,11 @@ body {
   grid-column: span 4;
   background-color: #FFFFFF;
   border-radius: 30px;
+  border: 1px solid #ccc;
+  margin-bottom: 16px;
 }
 .img__card_top {
   margin-top: -40px;
-}
-.img__item {
-  border-radius: 30px;
-  height: 314px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.img__item_1 {
-  background: url(/img/card1.svg);
-}
-.img__item_2 {
-  background: url(/img/card2.svg);
-}
-.img__item_3 {
-  background: url(/img/card3.svg);
-}
-.img__item_4 {
-  background: url(/img/card4.svg);
-}
-.img__item_5 {
-  background: url(/img/card5.svg);
-}
-.img__item_6 {
-  background: url(/img/card6.svg);
 }
 .img__number {
   width: 111px;
@@ -202,41 +185,20 @@ body {
   border-radius: 30px;
 }
 .galery__item {
-  margin-bottom: 32px;
-  border-radius: 30px;
-  color: rgb(32, 32, 39);
-  background-repeat: no-repeat;
+  max-width: 1200px;
   height: 500px;
-  width: 100%;
-  padding: 48px;
   background-color: #FFFFFF;
+  border-radius: 30px;
   display: flex;
-  flex-direction: column;
-}
-.galery__item_right {
-  background-position-x: right;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 .galery__item_left {
-  background-position-x: left;
-  align-items: flex-end;
+  flex-direction: row-reverse;
 }
-.galery__item_1 {
-  background-image: url(/img/img1.svg);
-}
-.galery__item_2 {
-  background-image: url(/img/img2.svg);
-}
-.galery__item_3 {
-  background-image: url(/img/img3.svg);
-}
-.galery__item_4 {
-  background-image: url(/img/img4.svg);
-}
-.galery__item_5 {
-  background-image: url(/img/img5.svg);
-}
-.galery__item_6 {
-  background-image: url(/img/img6.svg);
+.galery__card {
+  padding: 48px;
+  width: 100%;
 }
 .galery__title {
   color: rgb(32, 32, 39);
@@ -314,6 +276,10 @@ body {
     background-image: none;
     background-position: calc(100% + 86px) -80px, calc(100% - 343px) 125px, calc(100% - 295px) 77px, calc(100% - 47px) 688px, calc(100% - 118px) 670px;
     background-image: url("/img/miniStar1.svg"), url("/img/miniStar2.svg"), url("/img/miniStar3.svg"), url("/img/miniStar4.svg"), url("/img/miniStar5.svg");
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
   }
   .header__title {
     font-size: 40px;
@@ -321,23 +287,30 @@ body {
     text-align: center;
     display: flex;
     width: 262px;
-    padding-left: 57px;
   }
   .header__text {
     font-size: 16px;
     width: 340px;
-    padding-left: 40px;
     text-align: center;
   }
   .header__button {
     width: 285px;
     height: 55px;
     font-size: 16px;
-    margin-left: 46px;
   }
   .banner {
     width: 1717px;
     height: 51px;
+    width: 1717px;
+    height: 51px;
+    padding: 16px 24px 16px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .banner__star::after {
+    content: url(/img/Star_blackmini.svg);
   }
   .banner__text {
     font-size: 16px;
@@ -350,15 +323,57 @@ body {
   }
   .title {
     font-size: 40px;
+    padding-bottom: 39px;
+  }
+  .galery__conteiner {
+    background-image: none;
   }
   .galery__item {
-    height: 284px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
+    display: none;
+  }
+  .galery__item {
+    display: flex;
+    margin-bottom: 30px;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+  .galery__card {
+    width: 100%;
+    padding: 16px 58px 20px;
+  }
+  .galery__title {
+    font-size: 32px;
+    line-height: 39px;
+    width: 285px;
+  }
+  .galery__text {
+    font-size: 16px;
+    line-height: 20px;
+    width: 285px;
+  }
+  .galery__button {
+    width: 285px;
+    height: 55px;
+    font-size: 16px;
   }
   .footer {
     font-size: 16px;
+    height: 100px;
+    padding-top: 35px;
+  }
+}
+@media (max-width: 375px) {
+  .galery__card {
+    padding: 16px 30px 24px;
+  }
+}
+@media (max-width: 320px) {
+  .galery__card {
+    padding: 16px 15px 24px;
+  }
+  .galery__button {
+    width: 260px;
   }
 }/*# sourceMappingURL=style.css.map */

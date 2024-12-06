@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-/*html {
-    scroll-behavior: smooth;
-  }*/
 a{
     text-decoration: none;
 }
@@ -28,7 +25,7 @@ body{
     overflow: hidden;
     background-image: url("/img/Star-top.svg"), url("/img/Star\ 2.svg"), 
     url("/img/Star\ 3.svg"), url("/img/Star\ 4.svg"), url("/img/Star\ 5.svg");
-
+    
     &__title{
     font-size: 64px;
     font-weight: 700;
@@ -59,9 +56,11 @@ body{
         text-align: center;
         margin-bottom: 156px;
         font-family: "Montserrat";
+        transition: 0.5s;
     }
 }
-    .banner{
+ .banner{
+        position: relative; 
         width: 3220px;
         height: 90px;
         display: flex;
@@ -72,7 +71,7 @@ body{
         background: rgb(188, 236, 48);
         flex-wrap: wrap;
         overflow: hidden;
-
+        
         &__text{
             color: rgb(32, 32, 39);
             font-size: 30px;
@@ -81,8 +80,13 @@ body{
             padding-right: 51px;
             padding-left: 51px;
         }
+        &__star::after{
+            content: url('/img/Star_black.svg'); 
+            position: absolute; 
+            margin-left: 28px;
+        }
     }
-    .title{
+ .title{
         margin: 0;
         color: rgb(255, 255, 255);
         font-size: 64px;
@@ -106,7 +110,7 @@ body{
             
         }
     }
-    .img__conteiner{
+ .img__conteiner{
         background: rgb(32, 32, 39); 
         height: 100%;
         background-repeat: no-repeat;
@@ -114,153 +118,108 @@ body{
         background-image: url("/img/Star\ 1.svg"), url("/img/Star\ 11.svg"), url("/img/Star\ 12.svg");
         overflow: hidden;
     }
-    .img{
-        max-height: 1060px;
-        max-width: 1200px;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 32px;
-        align-items: start;
-        &__card{
-            display: flex;
-            flex-direction: column;
-            grid-column: span 4;
-            background-color: #FFFFFF ;
-            border-radius: 30px;
-                &_top{
-                    margin-top: -40px;
-                }
+ .img{
+    max-height: 1060px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 32px;
+    align-items: start;
+    &__card{
+        display: flex;
+        flex-direction: column;
+        grid-column: span 4;
+        background-color: #FFFFFF ;
+        border-radius: 30px;
+        border: 1px solid #ccc; 
+        margin-bottom: 16px; 
+            &_top{
+                margin-top: -40px;
+            }
         }
-        &__item{
-            border-radius: 30px;
-            height: 314px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        &__item_1{
-            background: url(/img/card1.svg);
-        }
-        &__item_2{
-            background: url(/img/card2.svg);
-        }
-        &__item_3{
-            background: url(/img/card3.svg);
-        }
-        &__item_4{
-            background: url(/img/card4.svg);
-        }
-        &__item_5{
-            background: url(/img/card5.svg);
-        }
-        &__item_6{
-            background: url(/img/card6.svg);
-        }
-        &__number{
-            width: 111px;
-            height: 36px;
-            color: rgb(32, 32, 39);
-            font-size: 16px;
-            font-weight: 500;
-            border-radius: 52.58px;
-            background: rgb(247, 247, 247);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 13px;
-            margin-left: 32px;
-            margin-bottom: 10px;
-        }
-        &__text{
-            color: rgb(32, 32, 39);
-            font-size: 32px;
-            font-weight: 700;
-            text-align: left;
-            padding: 0 36px 32px;
-            max-width: 372px;
-        }
-      
+    &__number{
+        width: 111px;
+        height: 36px;
+        color: rgb(32, 32, 39);
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 52.58px;
+        background: rgb(247, 247, 247);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 13px;
+        margin-left: 32px;
+        margin-bottom: 10px;
     }
-    .galery__conteiner{
-        background: rgb(32, 32, 39); 
-        height: 100%;
-        background-repeat: no-repeat;
-        background-position: calc(100% - 49px) 111px, calc(100% + -125px) 85px, calc(100% + -47px) 3372px, calc(100% + -139px) 3426px;
-        background-image: url("/img/Star\ 6.svg"), url("/img/Star\ 7.svg"), url("/img/Star\ 8.svg"), url("/img/Star\ 10.svg");
-        overflow: hidden;
-        padding-bottom: 144px;
+    &__text{
+        color: rgb(32, 32, 39);
+        font-size: 32px;
+        font-weight: 700;
+        text-align: left;
+        padding: 0 36px 32px;
+        max-width: 372px;
     }
-    .galery{
-    border-radius: 30px;
+}     
+.galery__conteiner{
+    background: rgb(32, 32, 39); 
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 49px) 111px, calc(100% + -125px) 85px, calc(100% + -47px) 3372px, calc(100% + -139px) 3426px;
+    background-image: url("/img/Star\ 6.svg"), url("/img/Star\ 7.svg"), url("/img/Star\ 8.svg"), url("/img/Star\ 10.svg");
+    overflow: hidden;
+    padding-bottom: 144px;
+}
+.galery{
+border-radius: 30px;
 
-        &__item{
-            margin-bottom: 32px;
-            border-radius: 30px;
-          color: rgb(32, 32, 39);
-          background-repeat: no-repeat;
-          height: 500px;
-          width: 100%;
-          padding: 48px;
-          background-color: #FFFFFF;
-          display: flex;
-          flex-direction: column;
-           &_right{
-            background-position-x: right;
-           }
-           &_left{
-            background-position-x: left;
-            align-items: flex-end;
-           }
-        }
-        &__item_1{
-            background-image: url(/img/img1.svg);  
-        }
-        &__item_2{
-            background-image: url(/img/img2.svg);
-        }
-        &__item_3{
-            background-image: url(/img/img3.svg);
-        }
-        &__item_4{
-            background-image: url(/img/img4.svg);
-        }
-        &__item_5{
-            background-image: url(/img/img5.svg);
-        }
-        &__item_6{
-            background-image: url(/img/img6.svg);
-        }
-        &__title{
-            color: rgb(32, 32, 39);
-            font-size: 48px;
-            font-weight: 700;
-            line-height: 59px;
-            padding-bottom: 24px;
-            width: 504px;
-        }
-        &__text{
-            color: rgb(32, 32, 39);
-            font-size: 24px;
-            font-weight: 400;
-            line-height: 32px;
-            padding-bottom: 36px;
-            width: 500px;
-        }
-        &__button{
-            width: 247px;
-            height: 66px;
-            border: 1px solid rgb(32, 32, 39);
-            border-radius: 60px;
-            background: rgb(32, 32, 39);
-            color: #FFFFFF;
-            font-size: 24px;
-            font-weight: 600;
-            text-align: center;
-            margin-right: 260px;
-            font-family: "Montserrat";
+    &__item{
+        max-width:1200px;
+        height: 500px;
+        background-color: #FFFFFF;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        &_left{
+            flex-direction: row-reverse;
         }
     }
+    &__card{
+        padding: 48px;
+        width: 100%;
+    }
+    &__title{
+        color: rgb(32, 32, 39);
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 59px;
+        padding-bottom: 24px;
+        width: 504px;
+    }
+    &__text{
+        color: rgb(32, 32, 39);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        padding-bottom: 36px;
+        width: 500px;
+    }
+    &__button{
+        width: 247px;
+        height: 66px;
+        border: 1px solid rgb(32, 32, 39);
+        border-radius: 60px;
+        background: rgb(32, 32, 39);
+        color: #FFFFFF;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        margin-right: 260px;
+        font-family: "Montserrat";
+    }
+}
     .footer{
         height: 150px;
         background: rgb(189, 237, 53);
@@ -272,6 +231,8 @@ body{
         padding-top: 61px;
     }
 
+
+//    //
 @import 'hover';
 @import 'mobile';
 

@@ -28,4 +28,3 @@ gamesOne();
 
 // document.getElementById('myButton').onclick = gamesOne;
 
-<script src="/games/gamesOne.js"></script>

@@ -2,29 +2,40 @@
 
 function gamesOne() {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
-    let guess = 0;
     let attempts = 0;
+    const maxAttempts = 3;
 
-    console.log("Угадайте число от 1 до 100!");
+    alert("Угадайте число от 1 до 100!");
 
-    while (guess !== randomNumber) {
-        guess = Number(prompt("Введите ваше предположение:"));
-        attempts++;
-        if (isNaN(guess)) {
-            console.log("Пожалуйста, введите корректное число.");
-            continue; 
-        }
+    while (attempts < maxAttempts){
+         const input = prompt("Введите ваше предположение (или нажмите 'Отмена' для выхода):"); 
+    
+        if (input === null) {
+        alert("Игра остановлена. Спасибо за участие!");
+        break;
+     }
+
+    const guess = Number(input);
+ 
+    if (isNaN(guess)) {
+      alert("Пожалуйста, введите корректное число.");
+      continue;
+    }
+    attempts++;
 
         if (guess < randomNumber) {
-            console.log("Слишком мало! Попробуйте еще раз.");
+            alert ("Слишком мало! Попробуйте еще раз.");
         } else if (guess > randomNumber) {
-            console.log("Слишком много! Попробуйте еще раз.");
+            alert ("Слишком много! Попробуйте еще раз.");
         } else {
-            console.log(`Поздравляем! Вы угадали число ${randomNumber} за ${attempts} попыток.`);
+            alert (`Поздравляем! Вы угадали число ${randomNumber} за ${attempts} попыток.`);
+        }
+        if (attempts === maxAttempts) {
+            alert(`Вы исчерпали все попытки. Загаданное число было ${randomNumber}.`);
         }
     }
 }
-gamesOne();
 
-// document.getElementById('myButton').onclick = gamesOne;
+
+
 

@@ -23,7 +23,7 @@ body {
 }
 
 .header {
-  max-height: 700px;
+  max-height: 800px;
   background: rgb(225, 255, 143);
   background-repeat: no-repeat;
   background-position: calc(100% + 480px) -400px, calc(100% - 1312px) 88px, calc(100% - 1258px) 50px, calc(100% - 346px) 540px, calc(100% - 436px) 495px;
@@ -115,7 +115,7 @@ body {
   padding-bottom: 72px;
 }
 
-.img__conteiner {
+.img__container {
   background: rgb(32, 32, 39);
   height: 100%;
   background-repeat: no-repeat;
@@ -169,7 +169,7 @@ body {
   max-width: 372px;
 }
 
-.galery__conteiner {
+.galery__container {
   background: rgb(32, 32, 39);
   height: 100%;
   background-repeat: no-repeat;
@@ -278,36 +278,34 @@ html {
     padding-right: 16px;
   }
   .header {
+    max-height: 700%;
     background-image: none;
-    background-position: calc(100% + 86px) -80px, calc(100% - 343px) 125px, calc(100% - 295px) 77px, calc(100% - 47px) 688px, calc(100% - 118px) 670px;
+    background-position: calc(100% + 86px) -80px, calc(100% - 343px) 125px, calc(100% - 295px) 77px, calc(100% - 47px) 632px, calc(100% - 115px) 614px;
     background-image: url("/img/miniStar1.svg"), url("/img/miniStar2.svg"), url("/img/miniStar3.svg"), url("/img/miniStar4.svg"), url("/img/miniStar5.svg");
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
   }
   .header__title {
     font-size: 40px;
     line-height: 49px;
     text-align: center;
+    padding-top: 147px;
   }
   .header__text {
     font-size: 16px;
-    line-height: 20px;
-    padding-left: 40px;
     text-align: center;
+    padding-bottom: 36px;
     line-height: 20px;
   }
   .header__button {
     width: 285px;
     height: 55px;
     font-size: 16px;
-    margin-left: 46px;
   }
   .banner {
-    width: 1717px;
-    height: 51px;
     width: 1717px;
     height: 51px;
     padding: 16px 24px 16px 24px;
@@ -317,17 +315,10 @@ html {
     align-items: flex-start;
   }
   .banner__star::after {
-    content: url("/img/Star_blackmini.svg");
+    content: url("./img/Star_blackmini.svg");
   }
   .banner__text {
     font-size: 16px;
-  }
-  scroll-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    font-size: 5em;
   }
   .img__conteiner {
     display: none;
@@ -347,17 +338,12 @@ html {
     margin-bottom: -54px;
   }
   .galery__item {
-    background-repeat: no-repeat;
-    background-size: 382px;
-    background-position: revert-layer;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column-reverse;
     justify-content: flex-end;
-    align-items: baseline;
-    width: 383px;
     margin: auto;
     margin-bottom: 30px;
-    padding-left: 30px;
-    height: 664px;
+    height: 100%;
   }
   .galery__title {
     font-size: 32px;
@@ -370,13 +356,32 @@ html {
     width: 285px;
   }
   .galery__button {
+    width: 285px;
     height: 55px;
     font-size: 16px;
-    margin-bottom: -22px;
+    margin: auto;
+  }
+  .galery__card {
+    padding: 30px 37px 32px;
   }
   .footer {
     font-size: 16px;
     height: 100px;
     padding-top: 35px;
+  }
+  scroll-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 5em;
+  }
+}
+@media (max-width: 320px) {
+  .galery__text {
+    width: 250px;
+  }
+  .galery__button {
+    width: 223px;
   }
 }/*# sourceMappingURL=style.css.map */

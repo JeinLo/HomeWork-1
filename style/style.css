@@ -4,9 +4,6 @@
   box-sizing: border-box;
 }
 
-/*html {
-    scroll-behavior: smooth;
-  }*/
 a {
   text-decoration: none;
 }
@@ -63,6 +60,7 @@ body {
   text-align: center;
   margin-bottom: 156px;
   font-family: "Montserrat";
+  transition: 0.5s;
 }
 
 .banner {
@@ -117,7 +115,7 @@ body {
   padding-bottom: 72px;
 }
 
-.img__conteiner {
+.img__container {
   background: rgb(32, 32, 39);
   height: 100%;
   background-repeat: no-repeat;
@@ -171,7 +169,7 @@ body {
   max-width: 372px;
 }
 
-.galery__conteiner {
+.galery__container {
   background: rgb(32, 32, 39);
   height: 100%;
   background-repeat: no-repeat;
@@ -241,6 +239,10 @@ body {
   padding-top: 61px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .header__button:hover {
   background: rgb(255, 255, 255);
   color: black;
@@ -268,30 +270,35 @@ body {
 }
 
 @media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
   .center {
     padding-left: 16px;
     padding-right: 16px;
   }
   .header {
+    max-height: 700%;
     background-image: none;
-    background-position: calc(100% + 86px) -80px, calc(100% - 343px) 125px, calc(100% - 295px) 77px, calc(100% - 47px) 688px, calc(100% - 118px) 670px;
+    background-position: calc(100% + 86px) -80px, calc(100% - 343px) 125px, calc(100% - 295px) 77px, calc(100% - 47px) 632px, calc(100% - 115px) 614px;
     background-image: url("/img/miniStar1.svg"), url("/img/miniStar2.svg"), url("/img/miniStar3.svg"), url("/img/miniStar4.svg"), url("/img/miniStar5.svg");
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+    align-items: center;
   }
   .header__title {
     font-size: 40px;
     line-height: 49px;
     text-align: center;
-    display: flex;
-    width: 262px;
+    padding-top: 147px;
   }
   .header__text {
     font-size: 16px;
-    width: 340px;
     text-align: center;
+    padding-bottom: 36px;
+    line-height: 20px;
   }
   .header__button {
     width: 285px;
@@ -301,8 +308,6 @@ body {
   .banner {
     width: 1717px;
     height: 51px;
-    width: 1717px;
-    height: 51px;
     padding: 16px 24px 16px 24px;
     display: flex;
     flex-direction: column;
@@ -310,43 +315,38 @@ body {
     align-items: flex-start;
   }
   .banner__star::after {
-    content: url(/img/Star_blackmini.svg);
+    content: url("./img/Star_blackmini.svg");
   }
   .banner__text {
     font-size: 16px;
   }
-  .img__conteiner {
+  .img__container {
     display: none;
   }
-  .img {
-    display: none;
-  }
-  .title {
+  .title-mini {
     font-size: 40px;
-    padding-bottom: 39px;
+    padding-bottom: 48px;
+    line-height: 49px;
   }
   .galery__conteiner {
     background-image: none;
   }
-  .galery__item {
-    display: none;
+  .galery {
+    margin-bottom: -54px;
   }
   .galery__item {
     display: flex;
-    margin-bottom: 30px;
-    flex-wrap: nowrap;
-    justify-content: space-around;
     flex-direction: column-reverse;
+    justify-content: flex-end;
+    margin: auto;
+    margin-bottom: 30px;
     height: 100%;
-  }
-  .galery__card {
-    width: 100%;
-    padding: 16px 58px 20px;
   }
   .galery__title {
     font-size: 32px;
     line-height: 39px;
     width: 285px;
+    padding-bottom: 16px;
   }
   .galery__text {
     font-size: 16px;
@@ -354,26 +354,32 @@ body {
     width: 285px;
   }
   .galery__button {
-    width: 285px;
+    width: 100%;
     height: 55px;
     font-size: 16px;
+    margin: auto;
+  }
+  .galery__card {
+    padding: 30px 30px 32px 30px;
   }
   .footer {
     font-size: 16px;
     height: 100px;
     padding-top: 35px;
   }
-}
-@media (max-width: 375px) {
-  .galery__card {
-    padding: 16px 30px 24px;
+  scroll-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 5em;
   }
 }
 @media (max-width: 320px) {
-  .galery__card {
-    padding: 16px 15px 24px;
+  .galery__text {
+    width: 250px;
   }
   .galery__button {
-    width: 260px;
+    width: 223px;
   }
 }/*# sourceMappingURL=style.css.map */

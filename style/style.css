@@ -320,16 +320,7 @@ html {
   .banner__text {
     font-size: 16px;
   }
-  .img__conteiner {
-    display: none;
-  }
-  .img {
-    display: none;
-  }
-  .title {
-    display: none;
-  }
-  .title__text {
+  .img__container {
     display: none;
   }
   .title-mini {

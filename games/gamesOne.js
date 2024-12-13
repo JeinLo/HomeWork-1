@@ -1,6 +1,6 @@
 //Игра 1
 
-function gameOne() {
+function gamesOne() {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     let attempts = 0;
     const maxAttempts = 3;
@@ -35,6 +35,7 @@ function gameOne() {
         }
     }
 }
+
 
 //Игра 2
 
@@ -87,3 +88,6 @@ function gameTwo() {
         }
     }
 }
+
+
+

@@ -52,7 +52,7 @@ console.log(type);
 
 const arrType = [9, 8, 7, 'a', 6, 5];
 arrType .sort((a, b) => a - b);
-const filteredArray = arrType .filter(item => item !== 'a');
+const filteredArray = arrType.filter(item => item !== 'a');
 
 console.log(filteredArray);
 
@@ -70,33 +70,19 @@ if (num.includes(userNumber)) {
 
 // Задание 8
 
-const original = 'abcdef';
-const charArray = original.split('');
-
-charArray.reverse();
-const reversedString = charArray.join('');
-
+const reversedString = 'abcdef'.split('').reverse().join('');
 console.log(reversedString);
-
 
 // Задание 9
 
 const nestedArray = [[1, 2, 3], [4, 5, 6]];
-const newArray = []
-
-for (let i = 0; i < nestedArray.length; i++) {
-    newArray.push(nestedArray[i]);
-}
-console.log(newArray);
-
-// Задание 10
+const newArray = nestedArray.flat(); 
+console.log(newArray); 
 
 const numbers = [3, 5, 1, 7, 9, 2]; 
 
 for (let i = 0; i < numbers.length - 1; i++) {
-
     const sum = numbers[i] + numbers[i + 1];
-
     console.log(`Сумма элементов ${numbers[i]} и ${numbers[i + 1]}: ${sum}`);
 }
 

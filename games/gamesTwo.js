@@ -33,6 +33,7 @@ function gameTwo() {
         const question = generateQuestion();
         const userAnswer = prompt(`Решите задачу: ${question} (или введите 'Отмена' для выхода)`);
 
+
         if (userAnswer === null || userAnswer.toLowerCase() === 'exit') {
             alert('Игра окончена. Спасибо за участие!');
             break;

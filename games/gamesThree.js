@@ -4,10 +4,6 @@ function gameThree() {
         const reversedText = text.split('').reverse().join(''); 
         alert(`Перевернутый текст: ${reversedText}`); 
     } else {
-        alert('Пожалуйста, введите текст.'); 
+        alert('Игра отменена.'); 
     }
 }
-function cancelGame() {
-    alert('Игра отменена.'); 
-}
-cancelGame(); 

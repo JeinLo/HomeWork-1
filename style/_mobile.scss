@@ -49,7 +49,7 @@
     align-items: flex-start;
 
     &__star::after{
-        content: url('/img/Star_blackmini.svg'); 
+        content: url(../img/Star_blackmini.svg); 
     }
     &__text{
         font-size: 16px;
@@ -128,4 +128,3 @@ scroll-page {
   }
 }
 
-// <script src="./hw6/hw6.js"></script>?

@@ -31,7 +31,8 @@ function calculateAnswer(question) {
 function gameTwo() {
     while (true) {
         const question = generateQuestion();
-        const userAnswer = prompt(`Решите задачу: ${question} (или введите 'exit' для выхода)`);
+        const userAnswer = prompt(`Решите задачу: ${question} (или введите 'Отмена' для выхода)`);
+
 
         if (userAnswer === null || userAnswer.toLowerCase() === 'exit') {
             alert('Игра окончена. Спасибо за участие!');

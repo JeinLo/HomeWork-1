@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw9</title>
+
+    <style>
+        .section {
+            margin-bottom: 20px;
+        }
+        .section__title{
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section">
+        <p class="section__title">Задание 1. Скрытие и показ текста</p>
+        <h1 id="header">Это заголовок</h1>
+        <button id="toggleButton">Скрыть</button>
+        <script>
+            const header = document.querySelector('#header');
+            const toggleButton = document.querySelector('#toggleButton');
+
+            toggleButton.addEventListener('click', () => {
+                if (header.style.display === 'none') {
+                    header.style.display = 'block';
+                    toggleButton.textContent = 'Скрыть';
+                } else {
+                    header.style.display = 'none';
+                    toggleButton.textContent = 'Показать';
+                }
+            });
+        </script>
+    </div>
+
+    <div class="section">
+        <p class="section__title">Задание 2. Изменение стиля элемента</p>
+        <p id="text">Это текст, который изменит цвет.</p>
+        <button id="changeColorButton">Изменить цвет</button>
+        <script>
+            const paragraph = document.querySelector('#text');
+            const changeColorButton = document.querySelector('#changeColorButton');
+
+            changeColorButton.addEventListener('click', () => {
+                paragraph.style.color = 'blue';
+            });
+        </script>
+    </div>
+
+    <div class="section">
+        <p class="section__title">Задание 3. Динамическое изменение текста</p>
+        <h1 id="dynamicHeader">Старый текст</h1>
+        <button id="changeTextButton">Изменить текст</button>
+        <script>
+            const dynamicHeader = document.querySelector('#dynamicHeader');
+            const changeTextButton = document.querySelector('#changeTextButton');
+
+            changeTextButton.addEventListener('click', () => {
+                dynamicHeader.textContent = 'Привет, мир!';
+            });
+        </script>
+    </div>
+
+    <div class="section">
+        <p class="section__title">Задание 4. Поиск и изменение элементов по классу</p>
+        <p class="description">Описание 1</p>
+        <p class="description">Описание 2</p>
+        <p>Не описание</p>
+        <button id="changeDescriptionButton">Изменить текст</button>
+        <script>
+            const descriptions = document.querySelectorAll('.description');
+            const changeDescriptionButton = document.querySelector('#changeDescriptionButton');
+
+            changeDescriptionButton.addEventListener('click', () => {
+                descriptions.forEach(desc => {
+                    desc.textContent = 'Измененный текст';
+                });
+            });
+        </script>
+    </div>
+
+    <div class="section">
+        <p class="section__title">Задание 5. Работа с querySelectorAll</p>
+        <p class="description">Описание 1</p>
+        <p class="description">Описание 2</p>
+        <p>Не описание</p>
+        <button id="changeDescriptionTextButton">Изменить текст</button>
+        <script>
+            const changeDescriptionTextButton = document.querySelector('#changeDescriptionTextButton');
+
+            changeDescriptionTextButton.addEventListener('click', () => {
+                const descriptions = document.querySelectorAll('.description');
+                descriptions.forEach(desc => {
+                    desc.textContent = 'Новый текст';
+                });
+            });
+        </script>
+    </div>
+
+    <div class="section">
+        <p class="section__title">Задание 6. Добавление нового элемента в DOM</p>
+        <button id="addElementButton">Добавить элемент</button>
+        <script>
+            document.querySelector('#addElementButton').addEventListener('click', () => {
+                const newParagraph = document.createElement('p');
+                newParagraph.textContent = 'Новый абзац';
+                document.body.appendChild(newParagraph);
+            });
+        </script>
+    </div>
+
+    <div class="section">
+        <p class="section__title">Задание 7. Удаление элемента</p>
+        <p class="description">Описание 1</p>
+        <p class="description">Описание 2</p>
+        <p>Не описание</p>
+        <button id="removeElementButton">Удалить элемент</button>
+        <script>
+            document.querySelector('#removeElementButton').addEventListener('click', () => {
+                const firstDescription = document.querySelector('.description');
+                if (firstDescription) {
+                    firstDescription.remove();
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>

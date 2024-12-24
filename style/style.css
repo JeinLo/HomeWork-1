@@ -76,31 +76,33 @@ body {
 }
 .banner__text-container {
   display: flex;
-  animation: marquee 20s linear infinite;
+  animation: text 15s linear infinite;
+  white-space: nowrap;
 }
 .banner__text {
   color: rgb(32, 32, 39);
   font-size: 30px;
   font-weight: 700;
+  margin-left: 35px;
   text-transform: uppercase;
-  padding: 0 51px;
-  white-space: nowrap;
+}
+.banner__item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
 }
 .banner__star {
-  margin-top: 6px;
-  margin-left: 5px;
+  margin-top: 3px;
+  margin-left: 13px;
   width: 24px;
   height: 24px;
-  background-image: url(../img/Star_black.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
 }
-@keyframes marquee {
-  from {
-    transform: translateX(100%);
+@keyframes text {
+  0% {
+    transform: translateX(0);
   }
-  to {
-    transform: translateX(-100%);
+  100% {
+    transform: translateX(-50%);
   }
 }
 

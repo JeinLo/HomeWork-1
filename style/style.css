@@ -282,6 +282,46 @@ html {
   transform: scale(1.1);
 }
 
+@media (min-width: 768px) and (max-width: 1200px) {
+  .img__container {
+    margin-bottom: -213px;
+  }
+  .img__text {
+    font-size: 25px;
+  }
+  .galery__container {
+    padding-bottom: 66px;
+  }
+  .galery__item {
+    height: auto;
+  }
+  .galery__card {
+    width: 390px;
+    height: 290px;
+    overflow: hidden;
+  }
+  .galery__title {
+    font-size: 30px;
+    line-height: 25px;
+    width: auto;
+  }
+  .galery__text {
+    font-size: 17px;
+    width: auto;
+    line-height: 22px;
+    padding-bottom: 23px;
+  }
+  .galery__button {
+    padding: 12px 104px;
+  }
+  .galery__img {
+    width: 360px;
+  }
+  .footer {
+    height: 92px;
+    padding-top: 36px;
+  }
+}
 @media (max-width: 767px) {
   body {
     overflow-x: hidden;

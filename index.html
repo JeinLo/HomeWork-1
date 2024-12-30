@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/style.css">
 </head>
-
+    
 <body>
     <div class="box">
         <header class="header center"> 
@@ -21,13 +21,58 @@
                 onclick="location.href='#about_games'">Поехали!</button>
         </header>
         <div class="banner">
-                <div class="banner__text banner__star">Викторина</div>
-                <div class="banner__text banner__star">угадай число</div>
-                <div class="banner__text banner__star">Переверни текст</div>
-                <div class="banner__text banner__star">Простая арифметика</div>
-                <div class="banner__text banner__star">Камень, ножницы, бумага</div>
-                <div class="banner__text banner__star">Генератор случайных цветов</div>
-        </div>
+            <div class="banner__text-container">
+                <span class="banner__item">
+                    <img src="/img/Star_black.svg" alt="star" class="banner__star">
+                    <span class="banner__text">Викторина</span>
+                </span>
+                <span class="banner__item">
+                    <img src="/img/Star_black.svg" alt="star" class="banner__star">
+                    <span class="banner__text">угадай число</span>
+                </span>
+                <span class="banner__item">
+                    <img src="/img/Star_black.svg" alt="star" class="banner__star">
+                    <span class="banner__text">Переверни текст</span>
+                </span>
+                <span class="banner__item">
+                    <img src="/img/Star_black.svg" alt="star" class="banner__star">
+                    <span class="banner__text">Простая арифметика</span>
+                </span>
+                <span class="banner__item">
+                    <img src="/img/Star_black.svg" alt="star" class="banner__star">
+                    <span class="banner__text">Камень, ножницы, бумага</span>
+                </span>
+                <span class="banner__item">
+                    <img src="/img/Star_black.svg" alt="star" class="banner__star">
+                    <span class="banner__text">Генератор случайных цветов</span>
+                </span>
+                <!-- Дублируем элементы для непрерывности -->
+                <span class="banner__item">
+                    <img src="/img/Star_black.svg" alt="star" class="banner__star">
+                    <span class="banner__text">Викторина</span>
+                </span>
+                <span class="banner__item">
+                    <img src="/img/Star_black.svg" alt="star" class="banner__star">
+                    <span class="banner__text">угадай число</span>
+                </span>
+                <span class="banner__item">
+                    <img src="/img/Star_black.svg" alt="star" class="banner__star">
+                    <span class="banner__text">Переверни текст</span>
+                </span>
+                <span class="banner__item">
+                    <img src="/img/Star_black.svg" alt="star" class="banner__star">
+                    <span class="banner__text">Простая арифметика</span>
+                </span>
+                <span class="banner__item">
+                    <img src="/img/Star_black.svg" alt="star" class="banner__star">
+                    <span class="banner__text">Камень, ножницы, бумага</span>
+                </span>
+                <span class="banner__item">
+                    <img src="/img/Star_black.svg" alt="star" class="banner__star">
+                    <span class="banner__text">Генератор случайных цветов</span>
+                </span>
+            </div>
+        </div>   
     </div>
     <section class="img__container center">
         <h2 class="title" id="about_games">Об играх</h2>
@@ -116,13 +161,13 @@
                 <p class="galery__text">Сыграй в популярную игру <br>против компьютера.</p>
                 <button class="galery__button" type="button" onclick="gameFive()">Играть!</button>
             </div>
-            <img src="img/221.png" alt="card_5"> 
+            <img src="img/XL.png" alt="card_5" class="galery__img"> 
         </div>
         <div class="galery__item galery__item_left"> 
             <div class="galery__card" id="play_6">
                 <h3 class="galery__title">Генератор случайных цветов</h3>
                 <p class="galery__text">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
-                <button class="galery__button" type="button" id="colorButton" onclick="gameSix()">Играть!</button>
+                <button class="galery__button" type="button"  onclick="gameSix()">Играть!</button>
             </div>
             <img src="img/card6.svg" alt="card_6">
          </div>
@@ -131,14 +176,11 @@
    <footer>
      <h3 class="footer">Все права защищены.</h3>
    </footer>
-  
-   <script src="./hw8/hw8.js"></script>
-   <script src="./games/gamesOne.js"></script>
-   <script src="./games/gamesTwo.js"></script>
-   <script src="./games/gamesThree.js"></script>
-   <script src="./games/gamesFour.js"></script>
-   <script src="./games/gamesFive.js"></script>
-   <script src="./games/gamesSix.js"></script>
+
+   <script>
+   
+</script>
+   <script src="./games/games.js"></script>
 
 </body>
 

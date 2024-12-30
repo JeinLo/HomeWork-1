@@ -1,3 +1,49 @@
+@media (min-width: 768px) and (max-width: 1200px) {
+    .img__container{
+        margin-bottom: -213px;
+    }
+    .img__text{
+        font-size: 25px;
+    }
+    .galery__container{
+        padding-bottom: 66px;
+    }
+    .galery{
+        &__item {
+        height: auto;
+        }
+        &__card{
+            width: 390px;
+            height: 290px;
+            overflow: hidden;
+        }
+        &__title{
+            font-size: 30px;
+            line-height: 25px;
+            width: auto;
+        }
+        &__text{
+            font-size: 17px;
+            width: auto;
+            line-height: 22px;
+            padding-bottom: 23px;
+        }
+        &__button{
+            padding: 12px 104px;
+        }
+        &__img{
+            width: 360px;
+        }
+    }
+    .footer{
+        height: 92px;
+        padding-top: 36px;
+    }
+}
+
+
+
+
 @media (max-width: 767px){
     body { 
         overflow-x: hidden;
@@ -47,9 +93,9 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-
-    &__star::after{
-        content: url(../img/Star_blackmini.svg); 
+  
+    &__star {
+        margin-top: -3px;
     }
     &__text{
         font-size: 16px;
@@ -99,6 +145,7 @@
     &__card{
         padding: 30px 30px 32px 30px;
     }
+  
 }
 
 .footer{

@@ -7,7 +7,7 @@
 ### Клонирование репозитория:
 Откройте терминал и выполните следующую команду, чтобы клонировать репозиторий на Ваш локальный компьютер:
 
-*git clone [https://github.com/username/repository.git](https://github.com/JeinLo/HomeWork-1)*
+*git clone https://github.com/JeinLo/HomeWork-1*
 
 
 ### Переход в директорию проекта:
